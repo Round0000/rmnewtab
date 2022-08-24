@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Nouvel onglet pratique</title>
+  </head>
+  <body>
+    <header>
+      <h1>Raccourcis</h1>
+      <ul id="actions-list">
+        <li class="actions-list__item">
+          <button data-action="create-new-shortcut">
+            Create
+          </button>
+        </li>
+      </ul>
+    </header>
+
+    <ul id="shortcuts-list">
+      <li class="shortcuts-list__item">
+        <a href="#">
+          <img src="https://cdn.iconscout.com/icon/free/png-256/netlify-3628945-3030170.png" alt="">
+          <span>Netlify</span>
+        </a>
+      </li>
+      <li class="shortcuts-list__item">
+        <a href="#">
+          <img src="https://cdn.iconscout.com/icon/free/png-256/netlify-3628945-3030170.png" alt="">
+          <span>Netlizafdzeg rege rgfy</span>
+        </a>
+      </li>
+    </ul>
+
+    <form id="new-shortcut" class="hidden">
+      <div>
+        <p>Nouveau raccourci</p>
+        <label>
+          <span>Titre</span>
+          <input placeholder="Intitulé du raccourci..." required spellcheck="false" type="text" name="title" />
+        </label>
+        <label>
+          <span>Adresse</span>
+          <input placeholder="Adresse URL..." required spellcheck="false" type="text" name="url" />
+        </label>
+        <label>
+          <span>Icône</span>
+          <input placeholder="Source de l'icône..." required spellcheck="false" type="text" name="icon" />
+        </label>
+      </div>
+      <button type="submit">Ajouter</button>
+    </form>
+  </body>
+</html>

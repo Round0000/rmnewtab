@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  --clr-blue: #1fb6ff;
+  --clr-purple: #7e5bef;
+  --clr-pink: #ff49db;
+  --clr-orange: #ff7849;
+  --clr-green: #13ce66;
+  --clr-yellow: #ffc82c;
+  --clr-gray-dark: #273444;
+  --clr-gray: #8492a6;
+  --clr-gray-light: #d3dce6;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Atkinson Hyperlegible", Tahoma, sans-serif;
+}
+input,
+button {
+  font-family: inherit;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: var(--clr-purple);
+}
+
+*::selection {
+  background-color: rgb(231, 240, 111);
+  color: #000;
+}
+
+.hidden {
+  display: none !important;
+}
+/*****************/
+
+/* Header */
+header {
+  background-color: var(--clr-gray-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#actions-list {
+  display: flex;
+  gap: 1em;
+}
+
+#actions-list button {
+  all: unset;
+  background-color: #fff;
+  padding: .25em .75em;
+  cursor: pointer;
+  outline: 1px solid transparent;
+  outline-offset: 2px;
+  transition: all .2s;
+}
+
+#actions-list button:hover,
+#actions-list button:focus {
+  outline-color: #fff;
+}
+
+
+/* Form */
+form {
+  width: max-content;
+  margin: 2em auto;
+  border-radius: 16px;
+  overflow: hidden;
+  outline: 2px solid #222;
+  outline-offset: -1px;
+}
+
+form > div {
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr-gray-light);
+}
+
+form > div p {
+  background-color: #222;
+  color: #fff;
+  padding: 0.25em;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  max-width: 80vw;
+  border-radius: 5px;
+  outline: 1px solid #000;
+  outline-offset: -1px;
+  overflow: hidden;
+  margin: 1em 1em 0;
+}
+
+form label:last-of-type {
+  margin-bottom: 1em;
+}
+
+form label:focus-within {
+  outline: 2px solid orange;
+}
+
+form label span {
+  font-size: 0.9rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0.25em 0.5em;
+  user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+form label:focus-within span {
+  background-color: #000;
+}
+
+form label input {
+  all: unset;
+  cursor: text;
+  padding: 0.4em;
+  padding-top: 0.3em;
+  background-color: snow;
+}
+
+form label input::placeholder {
+  font-size: 0.9rem;
+}
+
+button[type="submit"] {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  padding: 0.3em 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  width: 6em;
+  width: 100%;
+  margin: auto;
+  color: white;
+  user-select: none;
+  border-top: 2px solid #000;
+  transition: all 0.3s;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  padding: 1em 0;
+  color: orange;
+  background-color: #111;
+}
+
+/* Shortcuts list */
+#shortcuts-list {
+  display: grid;
+  padding: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+  gap: 1em;
+  justify-content: center;
+}
+
+.shortcuts-list__item {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.shortcuts-list__item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #111;
+  gap: 0.5em;
+  padding: 0.5em;
+}
+
+.shortcuts-list__item img {
+  object-fit: contain;
+  height: 2em;
+  width: 2em;
+}
+
+.shortcuts-list__item a span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
